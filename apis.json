@@ -1,0 +1,141 @@
+{
+    "name": "Urban Airship",
+    "description": "A market-leading mobile app engagement, mobile analytics, mobile data integration and mobile wallet marketing solution.",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/75-urban-airship.jpg",
+    "tags": [
+        "baas",
+        "have api",
+        "have swagger",
+        "locations",
+        "relative data",
+        "service api",
+        "streams"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/urban-airship\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "Urban Airship",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/75-urban-airship.jpg",
+            "humanURL": "http:\/\/urbanairship.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/urban-airship-openapi.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/urban-airship.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Website",
+            "url": "http:\/\/urbanairship.com\/"
+        },
+        {
+            "type": "Android SDK",
+            "url": "http:\/\/docs.urbanairship.com\/platform\/android.html"
+        },
+        {
+            "type": "Blackberry SDK",
+            "url": "http:\/\/docs.urbanairship.com\/platform\/blackberry.html"
+        },
+        {
+            "type": "Blog",
+            "url": "http:\/\/urbanairship.com\/blog"
+        },
+        {
+            "type": "Blog RSS",
+            "url": "http:\/\/urbanairship.com\/blog\/rss"
+        },
+        {
+            "type": "Case Studies",
+            "url": "http:\/\/urbanairship.com\/resources\/case-studies"
+        },
+        {
+            "type": "Crunchbase",
+            "url": "http:\/\/www.crunchbase.com\/company\/urban-airship"
+        },
+        {
+            "type": "Crunchbase",
+            "url": "https:\/\/crunchbase.com\/organization\/urban-airship"
+        },
+        {
+            "type": "Developers",
+            "url": "http:\/\/docs.urbanairship.com\/"
+        },
+        {
+            "type": "Email",
+            "url": "legal@urbanairship.com"
+        },
+        {
+            "type": "Email",
+            "url": "privacy@urbanairship.com"
+        },
+        {
+            "type": "Email",
+            "url": "support@urbanairship.com"
+        },
+        {
+            "type": "Github",
+            "url": "https:\/\/github.com\/urbanairship"
+        },
+        {
+            "type": "Glossary",
+            "url": "http:\/\/docs.urbanairship.com\/reference\/glossary.html"
+        },
+        {
+            "type": "iOS SDK",
+            "url": "http:\/\/docs.urbanairship.com\/platform\/ios.html"
+        },
+        {
+            "type": "LinkedIn",
+            "url": "https:\/\/www.linkedin.com\/company\/urban-airship\/"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/75-2019-09-03-18-44-29.json"
+        },
+        {
+            "type": "PhoneGap SDK",
+            "url": "http:\/\/docs.urbanairship.com\/platform\/phonegap.html"
+        },
+        {
+            "type": "Pricing",
+            "url": "https:\/\/www.urbanairship.com\/products\/engage\/pricing"
+        },
+        {
+            "type": "Privacy",
+            "url": "http:\/\/urbanairship.com\/legal\/privacy-policy"
+        },
+        {
+            "type": "Security",
+            "url": "http:\/\/docs.urbanairship.com\/reference\/app_keys_secrets.html"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/urbanairship"
+        },
+        {
+            "type": "Website",
+            "url": "http:\/\/urbanairship.com"
+        },
+        {
+            "type": "White Papers",
+            "url": "http:\/\/urbanairship.com\/resources\/whitepapers"
+        },
+        {
+            "type": "Windows SDK",
+            "url": "http:\/\/docs.urbanairship.com\/platform\/windows.html"
+        }
+    ]
+}
