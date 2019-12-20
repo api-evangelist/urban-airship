@@ -1,0 +1,2556 @@
+{
+    "id": "77e9908ee43808005c2beb9613650ff5",
+    "name": "Urban Airship",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "fd26bd5196dfd064dbe1a42ac7bfa8b1",
+            "name": "Put Device Tokens Token",
+            "url": "httpsgo.urbanairship.com\/api\/\/device_tokens\/{token}",
+            "description": "Registers a device token.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "token",
+                    "description": "Device tokens should be represented as an uppercase string, 64 characters long, without spaces or other separators. An example device token is: FE66489F304DC75B8D6E8200DFF8A456E8DAEACEC428B427E9518741C92C6660.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "token",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "0683ff966fc6e84e65789df98f942a00",
+            "name": "Get Device Tokens Token",
+            "url": "httpsgo.urbanairship.com\/api\/\/device_tokens\/{token}",
+            "description": "Gets a device token???s alias.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "token",
+                    "description": "Device tokens should be represented as an uppercase string, 64 characters long, without spaces or other separators. An example device token is: FE66489F304DC75B8D6E8200DFF8A456E8DAEACEC428B427E9518741C92C6660.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "token",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "87fa303d441d9b72c331a56d29cfe7c9",
+            "name": "Delete Device Tokens Token",
+            "url": "httpsgo.urbanairship.com\/api\/\/device_tokens\/{token}",
+            "description": "Marks the device token as inactive. No notifications will be delivered to it until a PUT is executed again. The DELETE returns HTTP 204 No Content, and needs no payload. When a token is deleted in this manner, any alias or tags will be cleared.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "token",
+                    "description": "Device tokens should be represented as an uppercase string, 64 characters long, without spaces or other separators. An example device token is: FE66489F304DC75B8D6E8200DFF8A456E8DAEACEC428B427E9518741C92C6660.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "token",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "34662d3e6083d54bb61aae437a2b5d12",
+            "name": "Post Push",
+            "url": "httpsgo.urbanairship.com\/api\/\/push",
+            "description": "Sends a push message to one or more users. Only one of aliases, tags, or device_pins is required, but they can be mixed and matched as much as you???d like.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "779d7fe392a03ac62fafc0ac898da753",
+            "name": "Delete Push Scheduled Notification",
+            "url": "httpsgo.urbanairship.com\/api\/\/push\/scheduled\/{notification}",
+            "description": "Cancels a scheduled notification.  A successful delete will have an HTTP status code of 204. If the scheduled notification does not exist, has already been successfully deleted, or was sent, the status code will be 404.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "notification",
+                    "description": "Scheduled notification ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "notification",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "7baf531c7a7c1dd61e350294dae33ea7",
+            "name": "Post Push Scheduled",
+            "url": "httpsgo.urbanairship.com\/api\/\/push\/scheduled",
+            "description": "Bulk deletes scheduled notifications. If you include URLs or aliases for scheduled notifications that don???t exist or have already been sent, they will be ignored. Any device token in the cancel_device_tokens payload will have every notification that is sent to it removed. This will not prevent it from receiving scheduled notifications to tags or broadcast messages.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "04048417c85eaf52b564d9a380dc28b4",
+            "name": "Put Push Scheduled Alias Alias",
+            "url": "httpsgo.urbanairship.com\/api\/\/push\/scheduled\/alias\/{alias}",
+            "description": "Changes a scheduled notification alias. Aliases for scheduled notifications are unique per Urban Airship application, so you might want to hash the aliases with a device ID or use some other mechanism to ensure uniqueness. The only other limit is that they must be 255 characters or less.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "alias",
+                    "description": "Scheduled notification alias.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "alias",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "0a8bf37ddf5a4c613be885cc21b8c6d3",
+            "name": "Delete Push Scheduled Alias Alias",
+            "url": "httpsgo.urbanairship.com\/api\/\/push\/scheduled\/alias\/{alias}",
+            "description": "Deletes a scheduled notification alias.  If you attempt to schedule an aliased scheduled notification with an alias that already exists for your application, it will overwrite the existing one.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "alias",
+                    "description": "Scheduled notification alias.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "alias",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "b8ad7d78a48331e59c19aaae02506273",
+            "name": "Post Push Batch",
+            "url": "httpsgo.urbanairship.com\/api\/\/push\/batch",
+            "description": "Sends a push message to all the listed PINs. Each item in the list can contain 0 or many device_pins and 0 or many aliases or tags, and the blackberry payload is in the same format as for individual pushes.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "cc614f20902f63b88bc05f854c9d1c18",
+            "name": "Post Push Broadcast",
+            "url": "httpsgo.urbanairship.com\/api\/\/push\/broadcast",
+            "description": "Sends a push message to all active APIDs (Broadcast). Important: The maximum message size is 1024 bytes. This is calculated as the UTF-8 lengths of alert and extra fields together.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "b2e8a3a4322a074ad899fc253283854e",
+            "name": "Get Push Stats",
+            "url": "httpsgo.urbanairship.com\/api\/\/push\/stats",
+            "description": "Returns hourly message counts for your application. By default, results are returned in JSON. For CSV, either add the header:Accept:text\/csv or append &format=csv to the query string. Times are in UTC, and data is provided for each push platform (currently: iOS, BlackBerry, Android, and C2DM, in that order). The statistics system is updated every 15 minutes, so the final count for an hour will be done at the latest 15 minutes after the hour is done.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "end",
+                    "description": "End date in UTC format. Example: 2009-06-22+06:00.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "format",
+                    "description": "Response format.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "start",
+                    "description": "Start date in UTC format. Example: 2009-06-22.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "21a3b9f810448707afe193e655d95102",
+            "name": "Get Device Tokens",
+            "url": "httpsgo.urbanairship.com\/api\/\/device_tokens",
+            "description": "Gets information about all of your device tokens. If your application has a large number of device tokens, we???ll paginate the request for you. By default, we paginate at 5000 device tokens. You can receive the next page simply by retrieving the URL from \"next_page\" - in this way it is easy to export all of your device tokens and all their data.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "limit",
+                    "description": "The total items to return. By default, we paginate at 5000 device tokens.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page",
+                    "description": "The page number.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "198d0ffbb04dc19f064213f244fa76fa",
+            "name": "Get Device Tokens Count",
+            "url": "httpsgo.urbanairship.com\/api\/\/device_tokens\/count",
+            "description": "Gets the number of device tokens you have registered.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "limit",
+                    "description": "The total items to return. By default, we paginate at 5000 device tokens.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page",
+                    "description": "The page number.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "7566a491202f7f83037ddfaba9fc29b3",
+            "name": "Get Device Tokens Feedback",
+            "url": "httpsgo.urbanairship.com\/api\/\/device_tokens\/feedback",
+            "description": "Gets what device tokens are now invalid. Apple informs us when a push notification is sent to a device that can???t receive it because the application has been uninstalled. We mark the device token as inactive and immediately stop sending notifications to that device. Once a day is a good interval for querying the feedback service, but you can do it more often to save on bandwidth from unnecessary notifications. In the response, what does marked_inactive_on mean? Apple sends a timestamp for each",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "since",
+                    "description": "Since timestamp in ISO 8601 format. Example: 2012-03-01+13:00:00.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "cc81bd15558d820766aee3e717f6249a",
+            "name": "Put Aps Ap",
+            "url": "httpsgo.urbanairship.com\/api\/\/apids\/{apid}",
+            "description": "Registers an APID. Unlike registration for iOS and BlackBerry applications, basic registration tying an APID to your application happens automatically. The registration API can be used to set aliases or tags. This returns HTTP 200 OK for any updates. Registering without any body is a no-op. Not including the alias field will clear it. To clear the list of tags, set it to the empty list []. If you are registering an APID to be used with C2DM, you will also need to include a C2DM registration ID.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "apid",
+                    "description": "An APID (Android Push ID) is the Urban Airship ID of a device to which a message can be pushed.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "apid",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "c90be05c46368deb22cf645d79982041",
+            "name": "Get Aps Ap",
+            "url": "httpsgo.urbanairship.com\/api\/\/apids\/{apid}",
+            "description": "Gets APID information.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "apid",
+                    "description": "An APID (Android Push ID) is the Urban Airship ID of a device to which a message can be pushed.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "apid",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "b3aa8038d9bae96037a515c0aa5db639",
+            "name": "Delete Aps Ap",
+            "url": "httpsgo.urbanairship.com\/api\/\/apids\/{apid}",
+            "description": "Marks an APID as invalid. No notifications will be delivered to it until it re-registers.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "apid",
+                    "description": "An APID (Android Push ID) is the Urban Airship ID of a device to which a message can be pushed.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "apid",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "2ebd64aa9d239b26347bd87ff721a2a3",
+            "name": "Get Aps",
+            "url": "httpsgo.urbanairship.com\/api\/\/apids",
+            "description": "Gets APIDs. You can control how many APIDs are returned at a time by using the limit GET argument. The maximum limit is 5000.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "limit",
+                    "description": "The total items to return. By default, we paginate at 5000 device tokens.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "start",
+                    "description": "Start date in UTC format. Example: 2009-06-22.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "8698d2cf3f7f13f27b4eb643518f89f0",
+            "name": "Put Device Pins Pin",
+            "url": "httpsgo.urbanairship.com\/api\/\/device_pins\/{pin}",
+            "description": "Registers a BlackBerry PIN. This is optional, but recommended, for BlackBerry push messages. This returns HTTP 201 Created for the first registration and 200 OK for any updates. If you wish to include additional information about a device pin, for instance an alias or tags, include a JSON payload along with this request. Not including one of these keys removes it from the device pin.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "pin",
+                    "description": "A BlackBerry PIN. Device PINs should be 8 character strings, without spaces.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "pin",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "58e4d87dc4e0091303f447710bfb4924",
+            "name": "Get Device Pins Pin",
+            "url": "httpsgo.urbanairship.com\/api\/\/device_pins\/{pin}",
+            "description": "Gets Device PIN information.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "pin",
+                    "description": "A BlackBerry PIN. Device PINs should be 8 character strings, without spaces.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "pin",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "cee9c6f688ad3fd726fa09ae7b888d30",
+            "name": "Delete Device Pins Pin",
+            "url": "httpsgo.urbanairship.com\/api\/\/device_pins\/{pin}",
+            "description": "Marks a PIN as inactive. No notifications will be delivered to it until a PUT is executed again.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "pin",
+                    "description": "A BlackBerry PIN. Device PINs should be 8 character strings, without spaces.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "pin",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "f732c60c70a715a1354df717eb2db1da",
+            "name": "Post User",
+            "url": "httpsgo.urbanairship.com\/api\/\/user",
+            "description": "Creates a new user and returns the credentials.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "60b477ca6d0375e469ae411d72e97a51",
+            "name": "Put User User",
+            "url": "httpsgo.urbanairship.com\/api\/\/user\/{user_id}",
+            "description": "Changes properties of an user - for example, changing or adding an email address.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "The user ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "ec162950b11b535389cfa0b169a99162",
+            "name": "Delete User User",
+            "url": "httpsgo.urbanairship.com\/api\/\/user\/{user_id}",
+            "description": "Deletes an user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user_id",
+                    "description": "The user ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "c30c66fe3ab341f41bc41492aca33b12",
+            "name": "Get User User",
+            "url": "httpsgo.urbanairship.com\/api\/\/user\/{user_id}",
+            "description": "Retrieves an user???s subscription information.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user_id",
+                    "description": "The user ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "1468fa1132909fec32815275db63da28",
+            "name": "Post User User Creds Reset",
+            "url": "httpsgo.urbanairship.com\/api\/\/user\/{user_id}\/creds\/reset",
+            "description": "Changes the password of an user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "The user ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "998cadede91086f9c96ab18257f3b290",
+            "name": "Post Airmail Send",
+            "url": "httpsgo.urbanairship.com\/api\/\/airmail\/send",
+            "description": "Sends a message. All fields except message are optional, but at least one of tags, users or aliases must be specified. Much like the push API, we have a batch API call that can make sending multiple messages easier. It???s located at \/api\/airmail\/send\/batch\/ and accepts a list of messages in the same format as the standard push call.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "a4d92aa90c67ec573029c5fd7142532d",
+            "name": "Post Airmail Send Broadcast",
+            "url": "httpsgo.urbanairship.com\/api\/\/airmail\/send\/broadcast",
+            "description": "Sends a message to all users (broadcast). Only message is required. The message will be sent out to every registered user. Badge numbers will be handled automatically as long as the push key is present.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "2effa7f3f0b9dc45c56695e4ee0795fa",
+            "name": "Get User User Messages",
+            "url": "httpsgo.urbanairship.com\/api\/\/user\/{user_id}\/messages",
+            "description": "Returns a list of messages and some metadata about them. It will also include some metadata about the user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "full_list",
+                    "description": "Get the full message included in this list (which might take a while to download).",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "since",
+                    "description": "Since timestamp in ISO 8601 format. Example: 2012-03-01+13:00:00.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "The user ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "dad492b66de0f22cbdde141fac0ea102",
+            "name": "Get User User Messages Unread",
+            "url": "httpsgo.urbanairship.com\/api\/\/user\/{user_id}\/messages\/unread",
+            "description": "Returns a list of unread message IDs and their URLs.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user_id",
+                    "description": "The user ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "aacfef85c01d1f53b486871682a3c8df",
+            "name": "Post User User Messages Unread",
+            "url": "httpsgo.urbanairship.com\/api\/\/user\/{user_id}\/messages\/unread",
+            "description": "Marks multiple messages as read at once. If a message has already been marked as read, it will be silently skipped.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "The user ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "cfeb4c1f9993f0e3e50178b0467973cf",
+            "name": "Get User User Messages Message Message",
+            "url": "httpsgo.urbanairship.com\/api\/\/user\/{user_id}\/messages\/message\/{message_id}",
+            "description": "Gets a message.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "message_id",
+                    "description": "The message ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "message_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "The user ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "1809e7fa6baa21c1bdb3079370c9344d",
+            "name": "Delete User User Messages Message Message",
+            "url": "httpsgo.urbanairship.com\/api\/\/user\/{user_id}\/messages\/message\/{message_id}",
+            "description": "Deletes a message.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "message_id",
+                    "description": "The message ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "message_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "The user ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "309a162193f404dd52910dcb6b09d4a0",
+            "name": "Get User User Messages Message Message Body",
+            "url": "httpsgo.urbanairship.com\/api\/\/user\/{user_id}\/messages\/message\/{message_id}\/body",
+            "description": "Gets a message's body.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "message_id",
+                    "description": "The message ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "message_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "The user ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "bc5f715e8a58659d843d5827b0eaf6e2",
+            "name": "Post User User Messages Message Message Read",
+            "url": "httpsgo.urbanairship.com\/api\/\/user\/{user_id}\/messages\/message\/{message_id}\/read",
+            "description": "Marks a message as read.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "message_id",
+                    "description": "The message ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "message_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "The user ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "fd52024da80c0d376a3379a77f98a1b5",
+            "name": "Post User User Messages Delete",
+            "url": "httpsgo.urbanairship.com\/api\/\/user\/{user_id}\/messages\/delete",
+            "description": "Deletes multiple messages at once. If a message has already been deleted, it will be silently skipped.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "The user ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "ce72b66956dccc350ef2a0fcc9ecec95",
+            "name": "Get App Content",
+            "url": "httpsgo.urbanairship.com\/api\/\/app\/content",
+            "description": "Gets the store inventory.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "The user ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "8d76fe9367eb4a50ba99c3255a66985e",
+            "name": "Post App Content Product Download",
+            "url": "httpsgo.urbanairship.com\/api\/\/app\/content\/{product_id}\/download",
+            "description": "Returns a temporary URL where the client can download the content. In the payload, the receipt string is the receipt data from the purchase. It should be unaltered from how Apple delivers it to your application.udid is an optional field to help identify a particular user???s purchases, which can aid debugging. It should always be a hash of the UDID, not the actual UDID, to ensure compliance with Apple???s TOS. The optional version field should be the StoreFront library version, or custom if you?",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "product_id",
+                    "description": "The product ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "product_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "0ad9888a6d2657d3fc1fcf41e76d0ae1",
+            "name": "Post App Updates",
+            "url": "httpsgo.urbanairship.com\/api\/\/app\/updates",
+            "description": "Checks for updates. It can be useful on application launch to compare a list of installed updates with our server to see if there are any updates to be had for the content.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "product_id",
+                    "description": "The product ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "822646918894664f9e8f90e7b6a4d069",
+            "name": "Post User Recover",
+            "url": "httpsgo.urbanairship.com\/api\/\/user\/recover",
+            "description": "Uses the user???s email address as a way to restore subscription content across devices.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "7d0b0aa0d77a2b2d063e6b86ca353f95",
+            "name": "Get User Recover",
+            "url": "httpsgo.urbanairship.com\/api\/\/user\/recover\/{id}",
+            "description": "Checks the recovery status.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "ID of the useru2019s account recovery.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "cf9b327658312fdcf81820413a0bf6b2",
+            "name": "Get User User Available Subscriptions",
+            "url": "httpsgo.urbanairship.com\/api\/\/user\/{user_id}\/available_subscriptions",
+            "description": "Retrieves subscription options.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user_id",
+                    "description": "The user ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "d4d46c62b9eb3c94e4b8b0fc16979887",
+            "name": "Post User User Subscriptions Subscription Key Purchase",
+            "url": "httpsgo.urbanairship.com\/api\/\/user\/{user_id}\/subscriptions\/{subscription_key}\/purchase",
+            "description": "Adds a new subscription.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "subscription_key",
+                    "description": "Subscription Key.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "subscription_key",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "The user ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "7e979004c187d70266ea7b5ca6a4cb5e",
+            "name": "Get User User Subscription Content",
+            "url": "httpsgo.urbanairship.com\/api\/\/user\/{user_id}\/subscription_content",
+            "description": "Returns a list of available content.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user_id",
+                    "description": "The user ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "521c02b9e63dc8da3c514f4950213165",
+            "name": "Post User User Subscriptions Content Content Download",
+            "url": "httpsgo.urbanairship.com\/api\/\/user\/{user_id}\/subscriptions\/content\/{content_id}\/download",
+            "description": "Downloads the content.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "content_id",
+                    "description": "Content ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "content_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "The user ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "c6e3aebb37ce538409b0b425da8ff2b8",
+            "name": "Post Feeds",
+            "url": "httpsgo.urbanairship.com\/api\/\/feeds",
+            "description": "Creates a new feed item.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "f513571da58392e7c26d312d688ac0e8",
+            "name": "Get Feeds",
+            "url": "httpsgo.urbanairship.com\/api\/\/feeds",
+            "description": "Gets a list of feeds.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "dc87a9f4e40e8635281b231b5e3bbbfb",
+            "name": "Get Feeds Feed",
+            "url": "httpsgo.urbanairship.com\/api\/\/feeds\/{feed_id}",
+            "description": "Returns information about a particular feed.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "feed_id",
+                    "description": "A particular feed.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "feed_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "aa2653a1a2b03fdadc3e012246c9b0f1",
+            "name": "Put Feeds Feed",
+            "url": "httpsgo.urbanairship.com\/api\/\/feeds\/{feed_id}",
+            "description": "Updates a feed.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "feed_id",
+                    "description": "A particular feed.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "feed_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "2aba8fa78b9642a4a2e6f0fa6ccb1bb6",
+            "name": "Delete Feeds Feed",
+            "url": "httpsgo.urbanairship.com\/api\/\/feeds\/{feed_id}",
+            "description": "Deletes a feed.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "feed_id",
+                    "description": "A particular feed.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "feed_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "3085132bbd5b84d130a3b9bf66d11e4f",
+            "name": "Get Tags",
+            "url": "httpsgo.urbanairship.com\/api\/\/tags",
+            "description": "Returns all the tags that you have created.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "feed_id",
+                    "description": "A particular feed.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "44a1bf30785903efc7a5a449638a5e64",
+            "name": "Put Tags Tag",
+            "url": "httpsgo.urbanairship.com\/api\/\/tags\/{tag}",
+            "description": "Deletes a tag.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "tag",
+                    "description": "Tags can be of any format you wish, but we recommend that they be URL-safe in order to make less work for you. The maximum length of a tag is 128 characters.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "tag",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "916957f0ed6d88417dd7d665bf51f983",
+            "name": "Post Tags Tag",
+            "url": "httpsgo.urbanairship.com\/api\/\/tags\/{tag}",
+            "description": "Modifies device tokens on a tag.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "tag",
+                    "description": "Tags can be of any format you wish, but we recommend that they be URL-safe in order to make less work for you. The maximum length of a tag is 128 characters.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "tag",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "7f08f66d723d31b6de74dd486476b543",
+            "name": "Get Device Tokens Device Token Tags",
+            "url": "httpsgo.urbanairship.com\/api\/\/device_tokens\/{device_token}\/tags",
+            "description": "Gets tags for a specific device token.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "device_token",
+                    "description": "A specific device token.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "device_token",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "a503ae658527d0db5f92f977da7b7d60",
+            "name": "Put Device Tokens Device Token Tags Tag",
+            "url": "httpsgo.urbanairship.com\/api\/\/device_tokens\/{device_token}\/tags\/{tag}",
+            "description": "Creates a tag and associate it with the specific device token.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "device_token",
+                    "description": "A specific device token.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "device_token",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "tag",
+                    "description": "Tags can be of any format you wish, but we recommend that they be URL-safe in order to make less work for you. The maximum length of a tag is 128 characters.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "tag",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "b3fddb5c4d4c186e2f5c33395ed9c3d3",
+            "name": "Delete Device Tokens Device Token Tags Tag",
+            "url": "httpsgo.urbanairship.com\/api\/\/device_tokens\/{device_token}\/tags\/{tag}",
+            "description": "Removes a single tag from a device token.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "device_token",
+                    "description": "A specific device token.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "device_token",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "tag",
+                    "description": "Tags can be of any format you wish, but we recommend that they be URL-safe in order to make less work for you. The maximum length of a tag is 128 characters.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "tag",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "8305fd986723eecb69b293470d6285e7",
+            "name": "Get Partner Apps",
+            "url": "httpsgo.urbanairship.com\/api\/\/partner\/apps",
+            "description": "List applications.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "device_token",
+                    "description": "A specific device token.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "tag",
+                    "description": "Tags can be of any format you wish, but we recommend that they be URL-safe in order to make less work for you. The maximum length of a tag is 128 characters.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "7165e184c8b909b5b2d3dd69a3e617e6",
+            "name": "Post Partner Apps",
+            "url": "httpsgo.urbanairship.com\/api\/\/partner\/apps",
+            "description": "Adds a new application.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        },
+        {
+            "id": "a7768c3d6241896b2398f7f2ad746c7c",
+            "name": "Put Partner Apps App",
+            "url": "httpsgo.urbanairship.com\/api\/\/partner\/apps\/{app_id}",
+            "description": "Updates an application.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "app_id",
+                    "description": "A specific application.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "app_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "Content type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "rawModeData": ""
+        }
+    ]
+}
