@@ -1,0 +1,1378 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "v3",
+        "title": "Urban Airship",
+        "description": "The Urban Airship's API powers mobile applications with push, rich push, in-app purchases and subscription services.",
+        "termsOfService": ""
+    },
+    "servers": [
+        "httpsgo.urbanairship.com\/api\/"
+    ],
+    "paths": {
+        "\/device_tokens\/{token}": {
+            "put": {
+                "summary": "Put Device Tokens Token",
+                "description": "Registers a device token.",
+                "operationId": "DeviceTokensTokenPut",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Device tokens should be represented as an uppercase string, 64 characters long, without spaces or other separators. An example device token is: FE66489F304DC75B8D6E8200DFF8A456E8DAEACEC428B427E9518741C92C6660."
+                    },
+                    {
+                        "name": "token",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            },
+            "get": {
+                "summary": "Get Device Tokens Token",
+                "description": "Gets a device token???s alias.",
+                "operationId": "DeviceTokensTokenGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Device tokens should be represented as an uppercase string, 64 characters long, without spaces or other separators. An example device token is: FE66489F304DC75B8D6E8200DFF8A456E8DAEACEC428B427E9518741C92C6660."
+                    },
+                    {
+                        "name": "token",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete Device Tokens Token",
+                "description": "Marks the device token as inactive. No notifications will be delivered to it until a PUT is executed again. The DELETE returns HTTP 204 No Content, and needs no payload. When a token is deleted in this manner, any alias or tags will be cleared.",
+                "operationId": "DeviceTokensTokenDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Device tokens should be represented as an uppercase string, 64 characters long, without spaces or other separators. An example device token is: FE66489F304DC75B8D6E8200DFF8A456E8DAEACEC428B427E9518741C92C6660."
+                    },
+                    {
+                        "name": "token",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/push": {
+            "post": {
+                "summary": "Post Push",
+                "description": "Sends a push message to one or more users. Only one of aliases, tags, or device_pins is required, but they can be mixed and matched as much as you???d like.",
+                "operationId": "PushPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": "Content type."
+                    },
+                    {
+                        "name": "Content",
+                        "in": "query",
+                        "description": "Content type."
+                    }
+                ]
+            }
+        },
+        "\/push\/scheduled\/{notification}": {
+            "delete": {
+                "summary": "Delete Push Scheduled Notification",
+                "description": "Cancels a scheduled notification.  A successful delete will have an HTTP status code of 204. If the scheduled notification does not exist, has already been successfully deleted, or was sent, the status code will be 404.",
+                "operationId": "PushScheduledNotificationDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "notification",
+                        "in": "query",
+                        "description": "Scheduled notification ID."
+                    },
+                    {
+                        "name": "notification",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/push\/scheduled": {
+            "post": {
+                "summary": "Post Push Scheduled",
+                "description": "Bulk deletes scheduled notifications. If you include URLs or aliases for scheduled notifications that don???t exist or have already been sent, they will be ignored. Any device token in the cancel_device_tokens payload will have every notification that is sent to it removed. This will not prevent it from receiving scheduled notifications to tags or broadcast messages.",
+                "operationId": "PushScheduledPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": "Content type."
+                    },
+                    {
+                        "name": "Content",
+                        "in": "query",
+                        "description": "Content type."
+                    }
+                ]
+            }
+        },
+        "\/push\/scheduled\/alias\/{alias}": {
+            "put": {
+                "summary": "Put Push Scheduled Alias Alias",
+                "description": "Changes a scheduled notification alias. Aliases for scheduled notifications are unique per Urban Airship application, so you might want to hash the aliases with a device ID or use some other mechanism to ensure uniqueness. The only other limit is that they must be 255 characters or less.",
+                "operationId": "PushScheduledAliasAliasPut",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": "Content type."
+                    },
+                    {
+                        "name": "alias",
+                        "in": "query",
+                        "description": "Scheduled notification alias."
+                    },
+                    {
+                        "name": "alias",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "Content",
+                        "in": "query",
+                        "description": "Content type."
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete Push Scheduled Alias Alias",
+                "description": "Deletes a scheduled notification alias.  If you attempt to schedule an aliased scheduled notification with an alias that already exists for your application, it will overwrite the existing one.",
+                "operationId": "PushScheduledAliasAliasDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "alias",
+                        "in": "query",
+                        "description": "Scheduled notification alias."
+                    },
+                    {
+                        "name": "alias",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/push\/batch": {
+            "post": {
+                "summary": "Post Push Batch",
+                "description": "Sends a push message to all the listed PINs. Each item in the list can contain 0 or many device_pins and 0 or many aliases or tags, and the blackberry payload is in the same format as for individual pushes.",
+                "operationId": "PushBatchPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": "Content type."
+                    },
+                    {
+                        "name": "Content",
+                        "in": "query",
+                        "description": "Content type."
+                    }
+                ]
+            }
+        },
+        "\/push\/broadcast": {
+            "post": {
+                "summary": "Post Push Broadcast",
+                "description": "Sends a push message to all active APIDs (Broadcast). Important: The maximum message size is 1024 bytes. This is calculated as the UTF-8 lengths of alert and extra fields together.",
+                "operationId": "PushBroadcastPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": "Content type."
+                    },
+                    {
+                        "name": "Content",
+                        "in": "query",
+                        "description": "Content type."
+                    }
+                ]
+            }
+        },
+        "\/push\/stats": {
+            "get": {
+                "summary": "Get Push Stats",
+                "description": "Returns hourly message counts for your application. By default, results are returned in JSON. For CSV, either add the header:Accept:text\/csv or append &format=csv to the query string. Times are in UTC, and data is provided for each push platform (currently: iOS, BlackBerry, Android, and C2DM, in that order). The statistics system is updated every 15 minutes, so the final count for an hour will be done at the latest 15 minutes after the hour is done.",
+                "operationId": "PushStatsGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "end",
+                        "in": "query",
+                        "description": "End date in UTC format. Example: 2009-06-22+06:00."
+                    },
+                    {
+                        "name": "format",
+                        "in": "query",
+                        "description": "Response format."
+                    },
+                    {
+                        "name": "start",
+                        "in": "query",
+                        "description": "Start date in UTC format. Example: 2009-06-22."
+                    }
+                ]
+            }
+        },
+        "\/device_tokens": {
+            "get": {
+                "summary": "Get Device Tokens",
+                "description": "Gets information about all of your device tokens. If your application has a large number of device tokens, we???ll paginate the request for you. By default, we paginate at 5000 device tokens. You can receive the next page simply by retrieving the URL from \"next_page\" - in this way it is easy to export all of your device tokens and all their data.",
+                "operationId": "DeviceTokensGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "The total items to return. By default, we paginate at 5000 device tokens."
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "The page number."
+                    }
+                ]
+            }
+        },
+        "\/device_tokens\/count": {
+            "get": {
+                "summary": "Get Device Tokens Count",
+                "description": "Gets the number of device tokens you have registered.",
+                "operationId": "DeviceTokensCountGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "The total items to return. By default, we paginate at 5000 device tokens."
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "The page number."
+                    }
+                ]
+            }
+        },
+        "\/device_tokens\/feedback": {
+            "get": {
+                "summary": "Get Device Tokens Feedback",
+                "description": "Gets what device tokens are now invalid. Apple informs us when a push notification is sent to a device that can???t receive it because the application has been uninstalled. We mark the device token as inactive and immediately stop sending notifications to that device. Once a day is a good interval for querying the feedback service, but you can do it more often to save on bandwidth from unnecessary notifications. In the response, what does marked_inactive_on mean? Apple sends a timestamp for each",
+                "operationId": "DeviceTokensFeedbackGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "since",
+                        "in": "query",
+                        "description": "Since timestamp in ISO 8601 format. Example: 2012-03-01+13:00:00."
+                    }
+                ]
+            }
+        },
+        "\/apids\/{apid}": {
+            "put": {
+                "summary": "Put Aps Ap",
+                "description": "Registers an APID. Unlike registration for iOS and BlackBerry applications, basic registration tying an APID to your application happens automatically. The registration API can be used to set aliases or tags. This returns HTTP 200 OK for any updates. Registering without any body is a no-op. Not including the alias field will clear it. To clear the list of tags, set it to the empty list []. If you are registering an APID to be used with C2DM, you will also need to include a C2DM registration ID.",
+                "operationId": "ApidsApidPut",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": "Content type."
+                    },
+                    {
+                        "name": "apid",
+                        "in": "query",
+                        "description": "An APID (Android Push ID) is the Urban Airship ID of a device to which a message can be pushed."
+                    },
+                    {
+                        "name": "apid",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "Content",
+                        "in": "query",
+                        "description": "Content type."
+                    }
+                ]
+            },
+            "get": {
+                "summary": "Get Aps Ap",
+                "description": "Gets APID information.",
+                "operationId": "ApidsApidGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "apid",
+                        "in": "query",
+                        "description": "An APID (Android Push ID) is the Urban Airship ID of a device to which a message can be pushed."
+                    },
+                    {
+                        "name": "apid",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete Aps Ap",
+                "description": "Marks an APID as invalid. No notifications will be delivered to it until it re-registers.",
+                "operationId": "ApidsApidDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "apid",
+                        "in": "query",
+                        "description": "An APID (Android Push ID) is the Urban Airship ID of a device to which a message can be pushed."
+                    },
+                    {
+                        "name": "apid",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/apids": {
+            "get": {
+                "summary": "Get Aps",
+                "description": "Gets APIDs. You can control how many APIDs are returned at a time by using the limit GET argument. The maximum limit is 5000.",
+                "operationId": "ApidsGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "The total items to return. By default, we paginate at 5000 device tokens."
+                    },
+                    {
+                        "name": "start",
+                        "in": "query",
+                        "description": "Start date in UTC format. Example: 2009-06-22."
+                    }
+                ]
+            }
+        },
+        "\/device_pins\/{pin}": {
+            "put": {
+                "summary": "Put Device Pins Pin",
+                "description": "Registers a BlackBerry PIN. This is optional, but recommended, for BlackBerry push messages. This returns HTTP 201 Created for the first registration and 200 OK for any updates. If you wish to include additional information about a device pin, for instance an alias or tags, include a JSON payload along with this request. Not including one of these keys removes it from the device pin.",
+                "operationId": "DevicePinsPinPut",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": "Content type."
+                    },
+                    {
+                        "name": "Content",
+                        "in": "query",
+                        "description": "Content type."
+                    },
+                    {
+                        "name": "pin",
+                        "in": "query",
+                        "description": "A BlackBerry PIN. Device PINs should be 8 character strings, without spaces."
+                    },
+                    {
+                        "name": "pin",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            },
+            "get": {
+                "summary": "Get Device Pins Pin",
+                "description": "Gets Device PIN information.",
+                "operationId": "DevicePinsPinGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "pin",
+                        "in": "query",
+                        "description": "A BlackBerry PIN. Device PINs should be 8 character strings, without spaces."
+                    },
+                    {
+                        "name": "pin",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete Device Pins Pin",
+                "description": "Marks a PIN as inactive. No notifications will be delivered to it until a PUT is executed again.",
+                "operationId": "DevicePinsPinDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "pin",
+                        "in": "query",
+                        "description": "A BlackBerry PIN. Device PINs should be 8 character strings, without spaces."
+                    },
+                    {
+                        "name": "pin",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/user": {
+            "post": {
+                "summary": "Post User",
+                "description": "Creates a new user and returns the credentials.",
+                "operationId": "UserPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": "Content type."
+                    },
+                    {
+                        "name": "Content",
+                        "in": "query",
+                        "description": "Content type."
+                    }
+                ]
+            }
+        },
+        "\/user\/{user_id}": {
+            "put": {
+                "summary": "Put User User",
+                "description": "Changes properties of an user - for example, changing or adding an email address.",
+                "operationId": "UserUserIdPut",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": "Content type."
+                    },
+                    {
+                        "name": "Content",
+                        "in": "query",
+                        "description": "Content type."
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "description": "The user ID."
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete User User",
+                "description": "Deletes an user.",
+                "operationId": "UserUserIdDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "description": "The user ID."
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            },
+            "get": {
+                "summary": "Get User User",
+                "description": "Retrieves an user???s subscription information.",
+                "operationId": "UserUserIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "description": "The user ID."
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/user\/{user_id}\/creds\/reset": {
+            "post": {
+                "summary": "Post User User Creds Reset",
+                "description": "Changes the password of an user.",
+                "operationId": "UserUserIdCredsResetPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": "Content type."
+                    },
+                    {
+                        "name": "Content",
+                        "in": "query",
+                        "description": "Content type."
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "description": "The user ID."
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/airmail\/send": {
+            "post": {
+                "summary": "Post Airmail Send",
+                "description": "Sends a message. All fields except message are optional, but at least one of tags, users or aliases must be specified. Much like the push API, we have a batch API call that can make sending multiple messages easier. It???s located at \/api\/airmail\/send\/batch\/ and accepts a list of messages in the same format as the standard push call.",
+                "operationId": "AirmailSendPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": "Content type."
+                    },
+                    {
+                        "name": "Content",
+                        "in": "query",
+                        "description": "Content type."
+                    }
+                ]
+            }
+        },
+        "\/airmail\/send\/broadcast": {
+            "post": {
+                "summary": "Post Airmail Send Broadcast",
+                "description": "Sends a message to all users (broadcast). Only message is required. The message will be sent out to every registered user. Badge numbers will be handled automatically as long as the push key is present.",
+                "operationId": "AirmailSendBroadcastPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": "Content type."
+                    },
+                    {
+                        "name": "Content",
+                        "in": "query",
+                        "description": "Content type."
+                    }
+                ]
+            }
+        },
+        "\/user\/{user_id}\/messages": {
+            "get": {
+                "summary": "Get User User Messages",
+                "description": "Returns a list of messages and some metadata about them. It will also include some metadata about the user.",
+                "operationId": "UserUserIdMessagesGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "full_list",
+                        "in": "query",
+                        "description": "Get the full message included in this list (which might take a while to download)."
+                    },
+                    {
+                        "name": "since",
+                        "in": "query",
+                        "description": "Since timestamp in ISO 8601 format. Example: 2012-03-01+13:00:00."
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "description": "The user ID."
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/user\/{user_id}\/messages\/unread": {
+            "get": {
+                "summary": "Get User User Messages Unread",
+                "description": "Returns a list of unread message IDs and their URLs.",
+                "operationId": "UserUserIdMessagesUnreadGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "description": "The user ID."
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Post User User Messages Unread",
+                "description": "Marks multiple messages as read at once. If a message has already been marked as read, it will be silently skipped.",
+                "operationId": "UserUserIdMessagesUnreadPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": "Content type."
+                    },
+                    {
+                        "name": "Content",
+                        "in": "query",
+                        "description": "Content type."
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "description": "The user ID."
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/user\/{user_id}\/messages\/message\/{message_id}": {
+            "get": {
+                "summary": "Get User User Messages Message Message",
+                "description": "Gets a message.",
+                "operationId": "UserUserIdMessagesMessageMessageIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "message_id",
+                        "in": "query",
+                        "description": "The message ID."
+                    },
+                    {
+                        "name": "message_id",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "description": "The user ID."
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete User User Messages Message Message",
+                "description": "Deletes a message.",
+                "operationId": "UserUserIdMessagesMessageMessageIdDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "message_id",
+                        "in": "query",
+                        "description": "The message ID."
+                    },
+                    {
+                        "name": "message_id",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "description": "The user ID."
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/user\/{user_id}\/messages\/message\/{message_id}\/body": {
+            "get": {
+                "summary": "Get User User Messages Message Message Body",
+                "description": "Gets a message's body.",
+                "operationId": "UserUserIdMessagesMessageMessageIdBodyGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "message_id",
+                        "in": "query",
+                        "description": "The message ID."
+                    },
+                    {
+                        "name": "message_id",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "description": "The user ID."
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/user\/{user_id}\/messages\/message\/{message_id}\/read": {
+            "post": {
+                "summary": "Post User User Messages Message Message Read",
+                "description": "Marks a message as read.",
+                "operationId": "UserUserIdMessagesMessageMessageIdReadPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "message_id",
+                        "in": "query",
+                        "description": "The message ID."
+                    },
+                    {
+                        "name": "message_id",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "description": "The user ID."
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/user\/{user_id}\/messages\/delete": {
+            "post": {
+                "summary": "Post User User Messages Delete",
+                "description": "Deletes multiple messages at once. If a message has already been deleted, it will be silently skipped.",
+                "operationId": "UserUserIdMessagesDeletePost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": "Content type."
+                    },
+                    {
+                        "name": "Content",
+                        "in": "query",
+                        "description": "Content type."
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "description": "The user ID."
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/app\/content": {
+            "get": {
+                "summary": "Get App Content",
+                "description": "Gets the store inventory.",
+                "operationId": "AppContentGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "query",
+                        "description": "Content type."
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "description": "The user ID."
+                    }
+                ]
+            }
+        },
+        "\/app\/content\/{product_id}\/download": {
+            "post": {
+                "summary": "Post App Content Product Download",
+                "description": "Returns a temporary URL where the client can download the content. In the payload, the receipt string is the receipt data from the purchase. It should be unaltered from how Apple delivers it to your application.udid is an optional field to help identify a particular user???s purchases, which can aid debugging. It should always be a hash of the UDID, not the actual UDID, to ensure compliance with Apple???s TOS. The optional version field should be the StoreFront library version, or custom if you?",
+                "operationId": "AppContentProductIdDownloadPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": "Content type."
+                    },
+                    {
+                        "name": "Content",
+                        "in": "query",
+                        "description": "Content type."
+                    },
+                    {
+                        "name": "product_id",
+                        "in": "query",
+                        "description": "The product ID."
+                    },
+                    {
+                        "name": "product_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/app\/updates": {
+            "post": {
+                "summary": "Post App Updates",
+                "description": "Checks for updates. It can be useful on application launch to compare a list of installed updates with our server to see if there are any updates to be had for the content.",
+                "operationId": "AppUpdatesPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": "Content type."
+                    },
+                    {
+                        "name": "Content",
+                        "in": "query",
+                        "description": "Content type."
+                    },
+                    {
+                        "name": "product_id",
+                        "in": "query",
+                        "description": "The product ID."
+                    }
+                ]
+            }
+        },
+        "\/user\/recover": {
+            "post": {
+                "summary": "Post User Recover",
+                "description": "Uses the user???s email address as a way to restore subscription content across devices.",
+                "operationId": "UserRecoverPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": "Content type."
+                    },
+                    {
+                        "name": "Content",
+                        "in": "query",
+                        "description": "Content type."
+                    }
+                ]
+            }
+        },
+        "\/user\/recover\/{id}": {
+            "get": {
+                "summary": "Get User Recover",
+                "description": "Checks the recovery status.",
+                "operationId": "UserRecoverIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "ID of the useru2019s account recovery."
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/user\/{user_id}\/available_subscriptions": {
+            "get": {
+                "summary": "Get User User Available Subscriptions",
+                "description": "Retrieves subscription options.",
+                "operationId": "UserUserIdAvailableSubscriptionsGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "description": "The user ID."
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/user\/{user_id}\/subscriptions\/{subscription_key}\/purchase": {
+            "post": {
+                "summary": "Post User User Subscriptions Subscription Key Purchase",
+                "description": "Adds a new subscription.",
+                "operationId": "UserUserIdSubscriptionsSubscriptionKeyPurchasePost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": "Content type."
+                    },
+                    {
+                        "name": "Content",
+                        "in": "query",
+                        "description": "Content type."
+                    },
+                    {
+                        "name": "subscription_key",
+                        "in": "query",
+                        "description": "Subscription Key."
+                    },
+                    {
+                        "name": "subscription_key",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "description": "The user ID."
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/user\/{user_id}\/subscription_content": {
+            "get": {
+                "summary": "Get User User Subscription Content",
+                "description": "Returns a list of available content.",
+                "operationId": "UserUserIdSubscriptionContentGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "description": "The user ID."
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/user\/{user_id}\/subscriptions\/content\/{content_id}\/download": {
+            "post": {
+                "summary": "Post User User Subscriptions Content Content Download",
+                "description": "Downloads the content.",
+                "operationId": "UserUserIdSubscriptionsContentContentIdDownloadPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": "Content type."
+                    },
+                    {
+                        "name": "Content",
+                        "in": "query",
+                        "description": "Content type."
+                    },
+                    {
+                        "name": "content_id",
+                        "in": "query",
+                        "description": "Content ID."
+                    },
+                    {
+                        "name": "content_id",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "description": "The user ID."
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/feeds": {
+            "post": {
+                "summary": "Post Feeds",
+                "description": "Creates a new feed item.",
+                "operationId": "FeedsPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": "Content type."
+                    },
+                    {
+                        "name": "Content",
+                        "in": "query",
+                        "description": "Content type."
+                    }
+                ]
+            },
+            "get": {
+                "summary": "Get Feeds",
+                "description": "Gets a list of feeds.",
+                "operationId": "FeedsGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "query",
+                        "description": "Content type."
+                    }
+                ]
+            }
+        },
+        "\/feeds\/{feed_id}": {
+            "get": {
+                "summary": "Get Feeds Feed",
+                "description": "Returns information about a particular feed.",
+                "operationId": "FeedsFeedIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "feed_id",
+                        "in": "query",
+                        "description": "A particular feed."
+                    },
+                    {
+                        "name": "feed_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Put Feeds Feed",
+                "description": "Updates a feed.",
+                "operationId": "FeedsFeedIdPut",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": "Content type."
+                    },
+                    {
+                        "name": "Content",
+                        "in": "query",
+                        "description": "Content type."
+                    },
+                    {
+                        "name": "feed_id",
+                        "in": "query",
+                        "description": "A particular feed."
+                    },
+                    {
+                        "name": "feed_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete Feeds Feed",
+                "description": "Deletes a feed.",
+                "operationId": "FeedsFeedIdDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "feed_id",
+                        "in": "query",
+                        "description": "A particular feed."
+                    },
+                    {
+                        "name": "feed_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/tags": {
+            "get": {
+                "summary": "Get Tags",
+                "description": "Returns all the tags that you have created.",
+                "operationId": "TagsGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "feed_id",
+                        "in": "query",
+                        "description": "A particular feed."
+                    }
+                ]
+            }
+        },
+        "\/tags\/{tag}": {
+            "put": {
+                "summary": "Put Tags Tag",
+                "description": "Deletes a tag.",
+                "operationId": "TagsTagPut",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "tag",
+                        "in": "query",
+                        "description": "Tags can be of any format you wish, but we recommend that they be URL-safe in order to make less work for you. The maximum length of a tag is 128 characters."
+                    },
+                    {
+                        "name": "tag",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Post Tags Tag",
+                "description": "Modifies device tokens on a tag.",
+                "operationId": "TagsTagPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": "Content type."
+                    },
+                    {
+                        "name": "Content",
+                        "in": "query",
+                        "description": "Content type."
+                    },
+                    {
+                        "name": "tag",
+                        "in": "query",
+                        "description": "Tags can be of any format you wish, but we recommend that they be URL-safe in order to make less work for you. The maximum length of a tag is 128 characters."
+                    },
+                    {
+                        "name": "tag",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/device_tokens\/{device_token}\/tags": {
+            "get": {
+                "summary": "Get Device Tokens Device Token Tags",
+                "description": "Gets tags for a specific device token.",
+                "operationId": "DeviceTokensDeviceTokenTagsGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "device_token",
+                        "in": "query",
+                        "description": "A specific device token."
+                    },
+                    {
+                        "name": "device_token",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/device_tokens\/{device_token}\/tags\/{tag}": {
+            "put": {
+                "summary": "Put Device Tokens Device Token Tags Tag",
+                "description": "Creates a tag and associate it with the specific device token.",
+                "operationId": "DeviceTokensDeviceTokenTagsTagPut",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "device_token",
+                        "in": "query",
+                        "description": "A specific device token."
+                    },
+                    {
+                        "name": "device_token",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "tag",
+                        "in": "query",
+                        "description": "Tags can be of any format you wish, but we recommend that they be URL-safe in order to make less work for you. The maximum length of a tag is 128 characters."
+                    },
+                    {
+                        "name": "tag",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete Device Tokens Device Token Tags Tag",
+                "description": "Removes a single tag from a device token.",
+                "operationId": "DeviceTokensDeviceTokenTagsTagDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "device_token",
+                        "in": "query",
+                        "description": "A specific device token."
+                    },
+                    {
+                        "name": "device_token",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "tag",
+                        "in": "query",
+                        "description": "Tags can be of any format you wish, but we recommend that they be URL-safe in order to make less work for you. The maximum length of a tag is 128 characters."
+                    },
+                    {
+                        "name": "tag",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/partner\/apps": {
+            "get": {
+                "summary": "Get Partner Apps",
+                "description": "List applications.",
+                "operationId": "PartnerAppsGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "device_token",
+                        "in": "query",
+                        "description": "A specific device token."
+                    },
+                    {
+                        "name": "tag",
+                        "in": "query",
+                        "description": "Tags can be of any format you wish, but we recommend that they be URL-safe in order to make less work for you. The maximum length of a tag is 128 characters."
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Post Partner Apps",
+                "description": "Adds a new application.",
+                "operationId": "PartnerAppsPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": "Content type."
+                    },
+                    {
+                        "name": "Content",
+                        "in": "query",
+                        "description": "Content type."
+                    }
+                ]
+            }
+        },
+        "\/partner\/apps\/{app_id}": {
+            "put": {
+                "summary": "Put Partner Apps App",
+                "description": "Updates an application.",
+                "operationId": "PartnerAppsAppIdPut",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": "Content type."
+                    },
+                    {
+                        "name": "app_id",
+                        "in": "query",
+                        "description": "A specific application."
+                    },
+                    {
+                        "name": "app_id",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "Content",
+                        "in": "query",
+                        "description": "Content type."
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": []
+    }
+}
