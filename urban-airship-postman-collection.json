@@ -1,5 +1,5 @@
 {
-    "id": "77e9908ee43808005c2beb9613650ff5",
+    "id": "9c832f87548c7d8bb903bd3a8ad65a1e",
     "name": "Urban Airship",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "fd26bd5196dfd064dbe1a42ac7bfa8b1",
+            "id": "43879756c5a381bf9bbc429ecafcbd1e",
             "name": "Put Device Tokens Token",
             "url": "httpsgo.urbanairship.com\/api\/\/device_tokens\/{token}",
             "description": "Registers a device token.",
@@ -44,11 +44,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "0683ff966fc6e84e65789df98f942a00",
+            "id": "f8ce8c1bf459c2f6779639420b0d59f5",
             "name": "Get Device Tokens Token",
             "url": "httpsgo.urbanairship.com\/api\/\/device_tokens\/{token}",
             "description": "Gets a device token???s alias.",
@@ -82,11 +82,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "87fa303d441d9b72c331a56d29cfe7c9",
+            "id": "2645ac3d2ad710f775249e22f5954d6c",
             "name": "Delete Device Tokens Token",
             "url": "httpsgo.urbanairship.com\/api\/\/device_tokens\/{token}",
             "description": "Marks the device token as inactive. No notifications will be delivered to it until a PUT is executed again. The DELETE returns HTTP 204 No Content, and needs no payload. When a token is deleted in this manner, any alias or tags will be cleared.",
@@ -120,11 +120,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "34662d3e6083d54bb61aae437a2b5d12",
+            "id": "42cab7ce02fda99c5a233b9cb817b2d3",
             "name": "Post Push",
             "url": "httpsgo.urbanairship.com\/api\/\/push",
             "description": "Sends a push message to one or more users. Only one of aliases, tags, or device_pins is required, but they can be mixed and matched as much as you???d like.",
@@ -158,11 +158,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "779d7fe392a03ac62fafc0ac898da753",
+            "id": "e38d57e99fb84bb79c16b7b1eb892684",
             "name": "Delete Push Scheduled Notification",
             "url": "httpsgo.urbanairship.com\/api\/\/push\/scheduled\/{notification}",
             "description": "Cancels a scheduled notification.  A successful delete will have an HTTP status code of 204. If the scheduled notification does not exist, has already been successfully deleted, or was sent, the status code will be 404.",
@@ -196,11 +196,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "7baf531c7a7c1dd61e350294dae33ea7",
+            "id": "07ff388420bf116888ead001dc090d9b",
             "name": "Post Push Scheduled",
             "url": "httpsgo.urbanairship.com\/api\/\/push\/scheduled",
             "description": "Bulk deletes scheduled notifications. If you include URLs or aliases for scheduled notifications that don???t exist or have already been sent, they will be ignored. Any device token in the cancel_device_tokens payload will have every notification that is sent to it removed. This will not prevent it from receiving scheduled notifications to tags or broadcast messages.",
@@ -234,11 +234,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "04048417c85eaf52b564d9a380dc28b4",
+            "id": "f14d71fa07f9a95458d1229058464874",
             "name": "Put Push Scheduled Alias Alias",
             "url": "httpsgo.urbanairship.com\/api\/\/push\/scheduled\/alias\/{alias}",
             "description": "Changes a scheduled notification alias. Aliases for scheduled notifications are unique per Urban Airship application, so you might want to hash the aliases with a device ID or use some other mechanism to ensure uniqueness. The only other limit is that they must be 255 characters or less.",
@@ -286,11 +286,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "0a8bf37ddf5a4c613be885cc21b8c6d3",
+            "id": "79ea0965fa1c74c99280d243d9ab9e25",
             "name": "Delete Push Scheduled Alias Alias",
             "url": "httpsgo.urbanairship.com\/api\/\/push\/scheduled\/alias\/{alias}",
             "description": "Deletes a scheduled notification alias.  If you attempt to schedule an aliased scheduled notification with an alias that already exists for your application, it will overwrite the existing one.",
@@ -324,11 +324,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "b8ad7d78a48331e59c19aaae02506273",
+            "id": "c05c8b65f53859a2036d57839b58ffca",
             "name": "Post Push Batch",
             "url": "httpsgo.urbanairship.com\/api\/\/push\/batch",
             "description": "Sends a push message to all the listed PINs. Each item in the list can contain 0 or many device_pins and 0 or many aliases or tags, and the blackberry payload is in the same format as for individual pushes.",
@@ -362,11 +362,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "cc614f20902f63b88bc05f854c9d1c18",
+            "id": "5c482c4d9130b921f972f67f962d59b8",
             "name": "Post Push Broadcast",
             "url": "httpsgo.urbanairship.com\/api\/\/push\/broadcast",
             "description": "Sends a push message to all active APIDs (Broadcast). Important: The maximum message size is 1024 bytes. This is calculated as the UTF-8 lengths of alert and extra fields together.",
@@ -400,11 +400,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "b2e8a3a4322a074ad899fc253283854e",
+            "id": "1b4e11e58702df8eb8f2ab187ab6c1c4",
             "name": "Get Push Stats",
             "url": "httpsgo.urbanairship.com\/api\/\/push\/stats",
             "description": "Returns hourly message counts for your application. By default, results are returned in JSON. For CSV, either add the header:Accept:text\/csv or append &format=csv to the query string. Times are in UTC, and data is provided for each push platform (currently: iOS, BlackBerry, Android, and C2DM, in that order). The statistics system is updated every 15 minutes, so the final count for an hour will be done at the latest 15 minutes after the hour is done.",
@@ -445,11 +445,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "21a3b9f810448707afe193e655d95102",
+            "id": "c54d364bd63607f7b8a626b4e6bcb448",
             "name": "Get Device Tokens",
             "url": "httpsgo.urbanairship.com\/api\/\/device_tokens",
             "description": "Gets information about all of your device tokens. If your application has a large number of device tokens, we???ll paginate the request for you. By default, we paginate at 5000 device tokens. You can receive the next page simply by retrieving the URL from \"next_page\" - in this way it is easy to export all of your device tokens and all their data.",
@@ -483,11 +483,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "198d0ffbb04dc19f064213f244fa76fa",
+            "id": "3511cb915f8f6bef3deac621d6164b5c",
             "name": "Get Device Tokens Count",
             "url": "httpsgo.urbanairship.com\/api\/\/device_tokens\/count",
             "description": "Gets the number of device tokens you have registered.",
@@ -521,11 +521,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "7566a491202f7f83037ddfaba9fc29b3",
+            "id": "e46d4204aa313eccd001ea4d753cfc18",
             "name": "Get Device Tokens Feedback",
             "url": "httpsgo.urbanairship.com\/api\/\/device_tokens\/feedback",
             "description": "Gets what device tokens are now invalid. Apple informs us when a push notification is sent to a device that can???t receive it because the application has been uninstalled. We mark the device token as inactive and immediately stop sending notifications to that device. Once a day is a good interval for querying the feedback service, but you can do it more often to save on bandwidth from unnecessary notifications. In the response, what does marked_inactive_on mean? Apple sends a timestamp for each",
@@ -552,11 +552,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "cc81bd15558d820766aee3e717f6249a",
+            "id": "7401fe9a7c9389d0647ba1906a3980ff",
             "name": "Put Aps Ap",
             "url": "httpsgo.urbanairship.com\/api\/\/apids\/{apid}",
             "description": "Registers an APID. Unlike registration for iOS and BlackBerry applications, basic registration tying an APID to your application happens automatically. The registration API can be used to set aliases or tags. This returns HTTP 200 OK for any updates. Registering without any body is a no-op. Not including the alias field will clear it. To clear the list of tags, set it to the empty list []. If you are registering an APID to be used with C2DM, you will also need to include a C2DM registration ID.",
@@ -604,11 +604,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "c90be05c46368deb22cf645d79982041",
+            "id": "ac7857da296cf4ff5e8abfa3599144f8",
             "name": "Get Aps Ap",
             "url": "httpsgo.urbanairship.com\/api\/\/apids\/{apid}",
             "description": "Gets APID information.",
@@ -642,11 +642,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "b3aa8038d9bae96037a515c0aa5db639",
+            "id": "7ee90dc414963db36fc2ef68ed40732c",
             "name": "Delete Aps Ap",
             "url": "httpsgo.urbanairship.com\/api\/\/apids\/{apid}",
             "description": "Marks an APID as invalid. No notifications will be delivered to it until it re-registers.",
@@ -680,11 +680,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "2ebd64aa9d239b26347bd87ff721a2a3",
+            "id": "3ffdb02e6e89383fda830773892a1787",
             "name": "Get Aps",
             "url": "httpsgo.urbanairship.com\/api\/\/apids",
             "description": "Gets APIDs. You can control how many APIDs are returned at a time by using the limit GET argument. The maximum limit is 5000.",
@@ -718,11 +718,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "8698d2cf3f7f13f27b4eb643518f89f0",
+            "id": "4439d5985fcde477006fd6986db19cd9",
             "name": "Put Device Pins Pin",
             "url": "httpsgo.urbanairship.com\/api\/\/device_pins\/{pin}",
             "description": "Registers a BlackBerry PIN. This is optional, but recommended, for BlackBerry push messages. This returns HTTP 201 Created for the first registration and 200 OK for any updates. If you wish to include additional information about a device pin, for instance an alias or tags, include a JSON payload along with this request. Not including one of these keys removes it from the device pin.",
@@ -770,11 +770,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "58e4d87dc4e0091303f447710bfb4924",
+            "id": "c9e517b4f35a8f5f6b5ca5abf41bccbf",
             "name": "Get Device Pins Pin",
             "url": "httpsgo.urbanairship.com\/api\/\/device_pins\/{pin}",
             "description": "Gets Device PIN information.",
@@ -808,11 +808,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "cee9c6f688ad3fd726fa09ae7b888d30",
+            "id": "2c15d34f48b4d3b5f5ea1e3af60190b5",
             "name": "Delete Device Pins Pin",
             "url": "httpsgo.urbanairship.com\/api\/\/device_pins\/{pin}",
             "description": "Marks a PIN as inactive. No notifications will be delivered to it until a PUT is executed again.",
@@ -846,11 +846,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "f732c60c70a715a1354df717eb2db1da",
+            "id": "20bcba5640f20f551c5bb17802c3e834",
             "name": "Post User",
             "url": "httpsgo.urbanairship.com\/api\/\/user",
             "description": "Creates a new user and returns the credentials.",
@@ -884,11 +884,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "60b477ca6d0375e469ae411d72e97a51",
+            "id": "c4ea0706bc625213c269df4edd19e18b",
             "name": "Put User User",
             "url": "httpsgo.urbanairship.com\/api\/\/user\/{user_id}",
             "description": "Changes properties of an user - for example, changing or adding an email address.",
@@ -936,11 +936,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "ec162950b11b535389cfa0b169a99162",
+            "id": "365af9a8f44fe377940ac6963bcbe03c",
             "name": "Delete User User",
             "url": "httpsgo.urbanairship.com\/api\/\/user\/{user_id}",
             "description": "Deletes an user.",
@@ -974,11 +974,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "c30c66fe3ab341f41bc41492aca33b12",
+            "id": "2b2a2bf63532d78b0a29572a4d492f8e",
             "name": "Get User User",
             "url": "httpsgo.urbanairship.com\/api\/\/user\/{user_id}",
             "description": "Retrieves an user???s subscription information.",
@@ -1012,11 +1012,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "1468fa1132909fec32815275db63da28",
+            "id": "307825ff432a1504227b531668df8ebe",
             "name": "Post User User Creds Reset",
             "url": "httpsgo.urbanairship.com\/api\/\/user\/{user_id}\/creds\/reset",
             "description": "Changes the password of an user.",
@@ -1064,11 +1064,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "998cadede91086f9c96ab18257f3b290",
+            "id": "f63225a858c4cbd05690de22ddc582c0",
             "name": "Post Airmail Send",
             "url": "httpsgo.urbanairship.com\/api\/\/airmail\/send",
             "description": "Sends a message. All fields except message are optional, but at least one of tags, users or aliases must be specified. Much like the push API, we have a batch API call that can make sending multiple messages easier. It???s located at \/api\/airmail\/send\/batch\/ and accepts a list of messages in the same format as the standard push call.",
@@ -1102,11 +1102,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "a4d92aa90c67ec573029c5fd7142532d",
+            "id": "ac30763889d07b74240312747cff8809",
             "name": "Post Airmail Send Broadcast",
             "url": "httpsgo.urbanairship.com\/api\/\/airmail\/send\/broadcast",
             "description": "Sends a message to all users (broadcast). Only message is required. The message will be sent out to every registered user. Badge numbers will be handled automatically as long as the push key is present.",
@@ -1140,11 +1140,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "2effa7f3f0b9dc45c56695e4ee0795fa",
+            "id": "7d90858dfff0b7ba86d0d844fe5a88cd",
             "name": "Get User User Messages",
             "url": "httpsgo.urbanairship.com\/api\/\/user\/{user_id}\/messages",
             "description": "Returns a list of messages and some metadata about them. It will also include some metadata about the user.",
@@ -1192,11 +1192,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "dad492b66de0f22cbdde141fac0ea102",
+            "id": "7cb22910a44765165479bf0bb4baac0d",
             "name": "Get User User Messages Unread",
             "url": "httpsgo.urbanairship.com\/api\/\/user\/{user_id}\/messages\/unread",
             "description": "Returns a list of unread message IDs and their URLs.",
@@ -1230,11 +1230,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "aacfef85c01d1f53b486871682a3c8df",
+            "id": "7c7e45b63cc672e136ee047170779a54",
             "name": "Post User User Messages Unread",
             "url": "httpsgo.urbanairship.com\/api\/\/user\/{user_id}\/messages\/unread",
             "description": "Marks multiple messages as read at once. If a message has already been marked as read, it will be silently skipped.",
@@ -1282,11 +1282,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "cfeb4c1f9993f0e3e50178b0467973cf",
+            "id": "d9a41636208fbc94bde4a4cfc8c6dda2",
             "name": "Get User User Messages Message Message",
             "url": "httpsgo.urbanairship.com\/api\/\/user\/{user_id}\/messages\/message\/{message_id}",
             "description": "Gets a message.",
@@ -1334,11 +1334,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "1809e7fa6baa21c1bdb3079370c9344d",
+            "id": "0d7e1499a5e653f8a6acd6df1e86e85a",
             "name": "Delete User User Messages Message Message",
             "url": "httpsgo.urbanairship.com\/api\/\/user\/{user_id}\/messages\/message\/{message_id}",
             "description": "Deletes a message.",
@@ -1386,11 +1386,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "309a162193f404dd52910dcb6b09d4a0",
+            "id": "bfed76951610ad522b9cf94be89eedcd",
             "name": "Get User User Messages Message Message Body",
             "url": "httpsgo.urbanairship.com\/api\/\/user\/{user_id}\/messages\/message\/{message_id}\/body",
             "description": "Gets a message's body.",
@@ -1438,11 +1438,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "bc5f715e8a58659d843d5827b0eaf6e2",
+            "id": "f15494e59a73715bcb4f705042b6615c",
             "name": "Post User User Messages Message Message Read",
             "url": "httpsgo.urbanairship.com\/api\/\/user\/{user_id}\/messages\/message\/{message_id}\/read",
             "description": "Marks a message as read.",
@@ -1490,11 +1490,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "fd52024da80c0d376a3379a77f98a1b5",
+            "id": "3f2fd9c2cdd64233c58dcd754fe21d03",
             "name": "Post User User Messages Delete",
             "url": "httpsgo.urbanairship.com\/api\/\/user\/{user_id}\/messages\/delete",
             "description": "Deletes multiple messages at once. If a message has already been deleted, it will be silently skipped.",
@@ -1542,11 +1542,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "ce72b66956dccc350ef2a0fcc9ecec95",
+            "id": "9f560190ad48813bc7993a94d62c85b8",
             "name": "Get App Content",
             "url": "httpsgo.urbanairship.com\/api\/\/app\/content",
             "description": "Gets the store inventory.",
@@ -1580,11 +1580,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "8d76fe9367eb4a50ba99c3255a66985e",
+            "id": "823782234e08e9aa3c5fce8c9e26b0f7",
             "name": "Post App Content Product Download",
             "url": "httpsgo.urbanairship.com\/api\/\/app\/content\/{product_id}\/download",
             "description": "Returns a temporary URL where the client can download the content. In the payload, the receipt string is the receipt data from the purchase. It should be unaltered from how Apple delivers it to your application.udid is an optional field to help identify a particular user???s purchases, which can aid debugging. It should always be a hash of the UDID, not the actual UDID, to ensure compliance with Apple???s TOS. The optional version field should be the StoreFront library version, or custom if you?",
@@ -1632,11 +1632,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "0ad9888a6d2657d3fc1fcf41e76d0ae1",
+            "id": "6555819da32948044ff7a3d2536732a8",
             "name": "Post App Updates",
             "url": "httpsgo.urbanairship.com\/api\/\/app\/updates",
             "description": "Checks for updates. It can be useful on application launch to compare a list of installed updates with our server to see if there are any updates to be had for the content.",
@@ -1677,11 +1677,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "822646918894664f9e8f90e7b6a4d069",
+            "id": "81a384be863fd17d3e3c867727df917f",
             "name": "Post User Recover",
             "url": "httpsgo.urbanairship.com\/api\/\/user\/recover",
             "description": "Uses the user???s email address as a way to restore subscription content across devices.",
@@ -1715,11 +1715,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "7d0b0aa0d77a2b2d063e6b86ca353f95",
+            "id": "d343caa168c00e12d37eb5f10f26cdcc",
             "name": "Get User Recover",
             "url": "httpsgo.urbanairship.com\/api\/\/user\/recover\/{id}",
             "description": "Checks the recovery status.",
@@ -1753,11 +1753,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "cf9b327658312fdcf81820413a0bf6b2",
+            "id": "57a1ccd77961b43dcb346ecc9b17c5be",
             "name": "Get User User Available Subscriptions",
             "url": "httpsgo.urbanairship.com\/api\/\/user\/{user_id}\/available_subscriptions",
             "description": "Retrieves subscription options.",
@@ -1791,11 +1791,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "d4d46c62b9eb3c94e4b8b0fc16979887",
+            "id": "c712478b549080fc5c54718d166ef65c",
             "name": "Post User User Subscriptions Subscription Key Purchase",
             "url": "httpsgo.urbanairship.com\/api\/\/user\/{user_id}\/subscriptions\/{subscription_key}\/purchase",
             "description": "Adds a new subscription.",
@@ -1857,11 +1857,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "7e979004c187d70266ea7b5ca6a4cb5e",
+            "id": "358d4f2fb5031100fd6d74aa0bc91334",
             "name": "Get User User Subscription Content",
             "url": "httpsgo.urbanairship.com\/api\/\/user\/{user_id}\/subscription_content",
             "description": "Returns a list of available content.",
@@ -1895,11 +1895,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "521c02b9e63dc8da3c514f4950213165",
+            "id": "3e3242fd52f3e63c13331e42fdbee913",
             "name": "Post User User Subscriptions Content Content Download",
             "url": "httpsgo.urbanairship.com\/api\/\/user\/{user_id}\/subscriptions\/content\/{content_id}\/download",
             "description": "Downloads the content.",
@@ -1961,11 +1961,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "c6e3aebb37ce538409b0b425da8ff2b8",
+            "id": "2619da7872c204484199c644bb1ad770",
             "name": "Post Feeds",
             "url": "httpsgo.urbanairship.com\/api\/\/feeds",
             "description": "Creates a new feed item.",
@@ -1999,11 +1999,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "f513571da58392e7c26d312d688ac0e8",
+            "id": "c1457989fc8823269628245ac6d5a090",
             "name": "Get Feeds",
             "url": "httpsgo.urbanairship.com\/api\/\/feeds",
             "description": "Gets a list of feeds.",
@@ -2030,11 +2030,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "dc87a9f4e40e8635281b231b5e3bbbfb",
+            "id": "49d9f9beddc975ab21fb5f66ebb162a6",
             "name": "Get Feeds Feed",
             "url": "httpsgo.urbanairship.com\/api\/\/feeds\/{feed_id}",
             "description": "Returns information about a particular feed.",
@@ -2068,11 +2068,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "aa2653a1a2b03fdadc3e012246c9b0f1",
+            "id": "9834a75ce721c4007d36557e6525f6b5",
             "name": "Put Feeds Feed",
             "url": "httpsgo.urbanairship.com\/api\/\/feeds\/{feed_id}",
             "description": "Updates a feed.",
@@ -2120,11 +2120,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "2aba8fa78b9642a4a2e6f0fa6ccb1bb6",
+            "id": "52e2992d5855eae089f9418f973ed3e1",
             "name": "Delete Feeds Feed",
             "url": "httpsgo.urbanairship.com\/api\/\/feeds\/{feed_id}",
             "description": "Deletes a feed.",
@@ -2158,11 +2158,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "3085132bbd5b84d130a3b9bf66d11e4f",
+            "id": "0a71448463868d699f9736ac0f903138",
             "name": "Get Tags",
             "url": "httpsgo.urbanairship.com\/api\/\/tags",
             "description": "Returns all the tags that you have created.",
@@ -2189,11 +2189,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "44a1bf30785903efc7a5a449638a5e64",
+            "id": "1c50db730e985835eeecf61081f0ca78",
             "name": "Put Tags Tag",
             "url": "httpsgo.urbanairship.com\/api\/\/tags\/{tag}",
             "description": "Deletes a tag.",
@@ -2227,11 +2227,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "916957f0ed6d88417dd7d665bf51f983",
+            "id": "43de81ba51312592031b416ade28398f",
             "name": "Post Tags Tag",
             "url": "httpsgo.urbanairship.com\/api\/\/tags\/{tag}",
             "description": "Modifies device tokens on a tag.",
@@ -2279,11 +2279,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "7f08f66d723d31b6de74dd486476b543",
+            "id": "2b7c283af08f92fc8add461008446c8d",
             "name": "Get Device Tokens Device Token Tags",
             "url": "httpsgo.urbanairship.com\/api\/\/device_tokens\/{device_token}\/tags",
             "description": "Gets tags for a specific device token.",
@@ -2317,11 +2317,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "a503ae658527d0db5f92f977da7b7d60",
+            "id": "43e730c2c0079e701e4a0626b302fecc",
             "name": "Put Device Tokens Device Token Tags Tag",
             "url": "httpsgo.urbanairship.com\/api\/\/device_tokens\/{device_token}\/tags\/{tag}",
             "description": "Creates a tag and associate it with the specific device token.",
@@ -2369,11 +2369,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "b3fddb5c4d4c186e2f5c33395ed9c3d3",
+            "id": "8f25f4cb13493308bba7e4c56f76fc4d",
             "name": "Delete Device Tokens Device Token Tags Tag",
             "url": "httpsgo.urbanairship.com\/api\/\/device_tokens\/{device_token}\/tags\/{tag}",
             "description": "Removes a single tag from a device token.",
@@ -2421,11 +2421,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "8305fd986723eecb69b293470d6285e7",
+            "id": "3c0528d1761b27683b7402d4ba46b7e3",
             "name": "Get Partner Apps",
             "url": "httpsgo.urbanairship.com\/api\/\/partner\/apps",
             "description": "List applications.",
@@ -2459,11 +2459,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "7165e184c8b909b5b2d3dd69a3e617e6",
+            "id": "4ce4f3064ba8db9023a7451d460c7599",
             "name": "Post Partner Apps",
             "url": "httpsgo.urbanairship.com\/api\/\/partner\/apps",
             "description": "Adds a new application.",
@@ -2497,11 +2497,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         },
         {
-            "id": "a7768c3d6241896b2398f7f2ad746c7c",
+            "id": "f9188f62c8078334a6d62cb5816d3cbb",
             "name": "Put Partner Apps App",
             "url": "httpsgo.urbanairship.com\/api\/\/partner\/apps\/{app_id}",
             "description": "Updates an application.",
@@ -2549,7 +2549,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "77e9908ee43808005c2beb9613650ff5",
+            "collectionId": "9c832f87548c7d8bb903bd3a8ad65a1e",
             "rawModeData": ""
         }
     ]
